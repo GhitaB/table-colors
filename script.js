@@ -36,9 +36,13 @@ $(document).ready(function() {
     update_status("Selected fill type: " + selected_type, "type");
   });
 
+  function table_fill(element, color, fill_type) {
+    $(element).css("background-color", color);
+  }
+
   $("button.tc-btn").on("click", function() {
-    if(selected_color.length && selected_color.length && selected_type.length) {
-      console.log("Done");
+    if((selected_element !== "") && (selected_color.length > 0) && (selected_type.length > 0)) {
+      table_fill(selected_element, selected_color, selected_type);
     } else {
       console.log("Invalid");
     }

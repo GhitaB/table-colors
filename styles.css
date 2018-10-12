@@ -7,11 +7,13 @@ body.tc {
   background: #EEEEEE;
   color: #000000;
 }
+
 body.tc div#table-colors {
   background: #FFFFFF;
   padding: 20px;
   margin: 20px;
 }
+
 body.tc div#table-colors h1 {
   font-family: 'Tangerine', cursive;
   color: #000000;
@@ -20,12 +22,19 @@ body.tc div#table-colors h1 {
   font-weight: 500;
   margin: 20px;
 }
+
+body.tc div#table-colors p#status {
+  text-align: center;
+  color: #757575;
+}
+
 body.tc div#table-colors table#editor {
   background: #EEEEEE;
   border-spacing: 5px;
   color: #000000;
   margin: auto;
 }
+
 body.tc div#table-colors table#editor tr,
 body.tc div#table-colors table#editor td,
 body.tc div#table-colors table#editor th {
@@ -34,6 +43,7 @@ body.tc div#table-colors table#editor th {
   margin: 5px;
   text-align: center;
 }
+
 body.tc div#table-colors table#editor th {
   user-select: none;
   -moz-user-select: none;

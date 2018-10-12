@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  var selected_element;  // dom element - table cell
-  var selected_color;    // hex: #EEAEEA
-  var selected_type;     // cell, row or column
+  window.selected_element = "";  // dom element - table cell
+  window.selected_color = "";    // hex: #EEAEEA
+  window.selected_type = "";     // cell, row or column
 
   function update_status(text, logger) {
     // Update text for element, color or type
@@ -19,18 +19,28 @@ $(document).ready(function() {
   }
 
   $('table#editor').click(function(e) {
-    update_status("Element selected: " + e.target.textContent, "element");
+    selected_element = e.target;
+    update_status("Element selected: " + selected_element.textContent, "element");
   });
 
   $("#select-color").spectrum({
     color: "#f00",
     change: function(color) {
-      update_status("Color selected: " + color.toHexString(), "color");
+      selected_color = color.toHexString();
+      update_status("Color selected: " + selected_color, "color");
     }
   });
 
   $("#select-type").on("change", function() {
     selected_type = $("#select-type option:selected").text();
     update_status("Selected fill type: " + selected_type, "type");
+  });
+
+  $("button.tc-btn").on("click", function() {
+    if(selected_color.length && selected_color.length && selected_type.length) {
+      console.log("Done");
+    } else {
+      console.log("Invalid");
+    }
   });
 });

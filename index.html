@@ -60,8 +60,13 @@
 
     <p id="status-element" class="status">Table initialized. Select an item by clicking it.</p>
     <p id="status-color" class="status">No color selected.<p>
-    <p id="status-type" class="status">No fill type selected.</p>
+    <p id="status-type" class="status">Selected fill type: Cell</p>
     <input type='text' id="select-color" />
+    <select id="select-type">
+      <option value="cell">Cell</option>
+      <option value="row">Entire row</option>
+      <option value="column">Entire column</option>
+    </select>
     <button class="tc-btn">Fill</button>
   </div>
 

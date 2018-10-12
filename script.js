@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var selected_element;  // dom element - table cell
   var selected_color;    // hex: #EEAEEA
-  var option;            // cell, row or column
+  var selected_type;     // cell, row or column
 
   function update_status(text, logger) {
     // Update text for element, color or type
@@ -29,4 +29,8 @@ $(document).ready(function() {
     }
   });
 
+  $("#select-type").on("change", function() {
+    selected_type = $("#select-type option:selected").text();
+    update_status("Selected fill type: " + selected_type, "type");
+  });
 });

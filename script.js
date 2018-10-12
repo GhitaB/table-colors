@@ -36,8 +36,23 @@ $(document).ready(function() {
     update_status("Selected fill type: " + selected_type, "type");
   });
 
-  function table_fill(element, color, fill_type) {
+  function table_fill_cell(element, color) {
     $(element).css("background-color", color);
+  }
+
+  function table_fill(element, color, fill_type) {
+    if(fill_type == "cell") {
+      table_fill_cell(element, color);
+      return;
+    }
+
+    if(fill_type == "row") {
+      console.log("Fill row");
+    }
+
+    if(fill_type == "column") {
+      console.log("Fill column");
+    }
   }
 
   $("button.tc-btn").on("click", function() {

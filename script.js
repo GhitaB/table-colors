@@ -58,6 +58,12 @@ $(document).ready(function() {
       ).each(function() {
         table_fill_cell($(this), color);
       });
+
+      $(element).closest("table").find(
+        "tr th:nth-child(" + ($(element).index() + 1) + ")"
+      ).each(function() {
+        table_fill_cell($(this), color);
+      });
     }
   }
 

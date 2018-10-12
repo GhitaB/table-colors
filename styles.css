@@ -23,7 +23,7 @@ body.tc div#table-colors h1 {
   margin: 20px;
 }
 
-body.tc div#table-colors p#status {
+body.tc div#table-colors p.status {
   text-align: center;
   color: #757575;
 }
@@ -52,15 +52,20 @@ body.tc div#table-colors table#editor th {
   -o-user-select: none;
 }
 
-/* body.tc div#table-colors .dta-btn { */
-/*   color: #A0B228; */
-/*   user-select: none; */
-/*   -moz-user-select: none; */
-/*   -khtml-user-select: none; */
-/*   -webkit-user-select: none; */
-/*   -o-user-select: none; */
-/* } */
-/* body.tc div#table-colors .dta-btn:hover { */
-/*   color: #819110; */
-/*   cursor: pointer; */
-/* } */
+body.tc div#table-colors .tc-btn {
+  background-color: #A0B228;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 6px 20px 6px 20px;
+  font-size: 18px;
+}
+body.tc div#table-colors .tc-btn:hover {
+  background-color: #819110;
+  cursor: pointer;
+}

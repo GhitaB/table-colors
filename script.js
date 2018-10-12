@@ -47,7 +47,9 @@ $(document).ready(function() {
     }
 
     if(fill_type == "row") {
-      console.log("Fill row");
+      $(element).parent().children().each(function() {
+        table_fill_cell($(this), selected_color)
+      });
     }
 
     if(fill_type == "column") {

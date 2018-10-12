@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  window.selected_element = "";  // dom element - table cell
-  window.selected_color = "";    // hex: #EEAEEA
-  window.selected_type = "";     // cell, row or column
+  window.selected_element = "";   // dom element - table cell
+  window.selected_color = "";     // hex: #EEAEEA
+  window.selected_type = "cell";  // cell, row or column
 
   function update_status(text, logger) {
     // Update text for element, color or type
@@ -48,12 +48,16 @@ $(document).ready(function() {
 
     if(fill_type == "row") {
       $(element).parent().children().each(function() {
-        table_fill_cell($(this), selected_color)
+        table_fill_cell($(this), color)
       });
     }
 
     if(fill_type == "column") {
-      console.log("Fill column");
+      $(element).closest("table").find(
+        "tr td:nth-child(" + ($(element).index() + 1) + ")"
+      ).each(function() {
+        table_fill_cell($(this), color);
+      });
     }
   }
 

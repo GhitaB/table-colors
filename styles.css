@@ -1,3 +1,56 @@
-body {
-  background: red !important;
+/* https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c
+   #FFFFFF #EEEEEE #757575 #000000 #bfd630 #A0B228 #819110
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Tangerine');
+body.tc {
+  font-family: 'Open Sans', sans-serif;
+  background: #EEEEEE;
+  color: #000000;
 }
+body.tc div#table-colors {
+  background: #FFFFFF;
+  padding: 20px;
+  margin: 20px;
+}
+body.tc div#table-colors h1 {
+  font-family: 'Tangerine', cursive;
+  color: #000000;
+  text-align: center;
+  font-size: 86px;
+  font-weight: 500;
+  margin: 20px;
+}
+body.tc div#table-colors table#editor {
+  background: #EEEEEE;
+  border-spacing: 5px;
+  color: #000000;
+  margin: auto;
+}
+body.tc div#table-colors table#editor tr,
+body.tc div#table-colors table#editor td,
+body.tc div#table-colors table#editor th {
+  background: #FFFFFF;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+body.tc div#table-colors table#editor th {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+/* body.tc div#table-colors .dta-btn { */
+/*   color: #A0B228; */
+/*   user-select: none; */
+/*   -moz-user-select: none; */
+/*   -khtml-user-select: none; */
+/*   -webkit-user-select: none; */
+/*   -o-user-select: none; */
+/* } */
+/* body.tc div#table-colors .dta-btn:hover { */
+/*   color: #819110; */
+/*   cursor: pointer; */
+/* } */
